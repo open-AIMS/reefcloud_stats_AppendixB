@@ -54,7 +54,7 @@ This document contains additional results associated with the paper. R codes are
 ```{r}
 #| include: true
 #| echo: true
-#| eval: false
+#| eval: true
 
 rm(list=ls())
 
@@ -117,9 +117,10 @@ source("scripts/model_perf_allsim.R")
 #| eval: true
 #| cache: false
 
+# If eval:false above, these need to be turned on. 
 # Source packages and functions 
-source("R/packages.R")
-source("R/functions.R")
+#source("R/packages.R")
+#source("R/functions.R")
 
 # Grep names and locations of simulations in the home folder
 all_dirs <- list.dirs(full.names = FALSE, recursive = FALSE)
