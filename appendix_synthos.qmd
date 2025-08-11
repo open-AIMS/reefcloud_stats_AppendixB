@@ -56,8 +56,6 @@ This document contains additional results associated with the paper. R codes are
 #| echo: true
 #| eval: false
 
-#setwd("c:/Users/jvercell/OneDrive - Australian Institute of Marine Science/AIMS/01_Research projects/ReefCloud/SP_models/FRK_dev/Spatio-temporal model/Appendix_A")
-
 rm(list=ls())
 
 # Loading packages and functions
@@ -68,7 +66,7 @@ source("R/functions.R")
 
  ######## Simulation 1 ########
 title_of_run <- "High-resolution"
-#####Create folders
+##### Create folders
 make_folders(title_of_run)
 ##### Generate settings
 generateSettings(nreefs = 25, nyears = 20)
@@ -125,7 +123,7 @@ source("R/functions.R")
 
 # Grep names and locations of simulations in the home folder
 all_dirs <- list.dirs(full.names = FALSE, recursive = FALSE)
-exclude_patterns <- c("R", "scripts", "old", "sp_pipeline", "extra","resources", "extra_scenarios")
+exclude_patterns <- c("R", "scripts", "resources")
 included_dirs <- all_dirs[!sapply(all_dirs, function(dir) any(grepl(paste(exclude_patterns, collapse = "|"), dir)))] 
 included_dirs <- included_dirs[!grepl("^\\d", included_dirs)]
 
